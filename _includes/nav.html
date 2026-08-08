@@ -1,0 +1,6 @@
+<nav class="site-nav" aria-label="Hoofdnavigatie">
+  <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+  <a href="{{ '/artikelen.html' | relative_url }}" {% if page.url == '/artikelen.html' %}aria-current="page"{% endif %}>Artikelen</a>
+  <a href="{{ '/over.html' | relative_url }}" {% if page.url == '/over.html' %}aria-current="page"{% endif %}>Over</a>
+  <a href="{{ '/contact.html' | relative_url }}" {% if page.url == '/contact.html' %}aria-current="page"{% endif %}>Contact</a>
+</nav>
