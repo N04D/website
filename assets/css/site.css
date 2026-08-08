@@ -120,29 +120,29 @@ h1, h2, h3 {
 h1 {
   margin: 0;
   max-width: 780px;
-  font-size: clamp(2.05rem, 4vw, 3.6rem);
+  font-size: clamp(1.85rem, 3.2vw, 2.8rem);
   font-weight: 650;
 }
 
 .hero h1 {
-  font-size: clamp(2.65rem, 6vw, 5.6rem);
+  font-size: clamp(2.1rem, 4.4vw, 3.7rem);
 }
 
 h2 {
   margin: 0 0 18px;
-  font-size: clamp(1.7rem, 3vw, 2.55rem);
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
 }
 
 h3 {
   margin: 0 0 10px;
-  font-size: 1.3rem;
+  font-size: 1.12rem;
 }
 
 .lede {
   max-width: 680px;
   margin: 22px 0 0;
   color: #3e3a35;
-  font-size: clamp(1.08rem, 1.7vw, 1.28rem);
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
 }
 
 .hero-note {
@@ -219,7 +219,7 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.page-panel h1 { font-size: clamp(2rem, 3.5vw, 3rem); }
+.page-panel h1 { font-size: clamp(1.8rem, 3vw, 2.45rem); }
 
 .page-panel p:first-of-type { font-size: 1.05rem; }
 
@@ -256,7 +256,7 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.content h1 { font-size: clamp(2rem, 4vw, 3.35rem); }
+.content h1 { font-size: clamp(1.8rem, 3.2vw, 2.65rem); }
 .content img { max-width: 100%; height: auto; }
 .content a { color: var(--blue); }
 .content code { background: #f0ece5; padding: 0.15em 0.35em; border-radius: 4px; }
