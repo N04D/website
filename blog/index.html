@@ -1,0 +1,22 @@
+---
+layout: default
+title: Artikelen
+description: "Artikelen, analyses en essays van J.D. Berghuijs."
+---
+<header class="simple-masthead"><div class="wrapper"><p class="eyebrow">Publicaties / achtergrond / reflectie</p><h1>Artikelen & essays</h1><p>Uitgebreide analyses, onderzoeksupdates en reflecties. Elk artikel krijgt automatisch dezelfde typografie en opmaak.</p></div></header>
+<div class="wrapper listing-page">
+{% assign auto_articles = site.pages | where_exp: "entry", "entry.path contains 'articles/'" | where_exp: "entry", "entry.status == 'published'" %}
+{% assign n_articles = auto_articles.size | plus: site.posts.size %}
+{% if n_articles > 0 %}
+  <div class="post-grid">
+    {% for post in site.posts %}
+      <article class="post-card"><span class="post-category">{{ post.category | default: 'Essay' | escape }}</span><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2><p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 35 | escape }}</p><footer><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d-%m-%Y' }}</time><a href="{{ post.url | relative_url }}">Lees verder →</a></footer></article>
+    {% endfor %}
+    {% for post in auto_articles %}
+      <article class="post-card"><span class="post-category">{{ post.category | default: 'Publicatie' | escape }}</span><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2><p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 35 | escape }}</p><footer><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d-%m-%Y' }}</time><a href="{{ post.url | relative_url }}">Lees verder →</a></footer></article>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="empty-posts"><h2>Nieuwe artikelen volgen.</h2><p>Conceptteksten staan nog niet publiek. Zodra een artikel is gecontroleerd, komt het hier automatisch in de lijst.</p><a href="{{ '/tijdlijn/' | relative_url }}">Bekijk alvast de beleidstijdlijn →</a></div>
+{% endif %}
+</div>

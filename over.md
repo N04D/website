@@ -1,9 +1,19 @@
 ---
-title: Over
+layout: page
+title: Over dit platform
+permalink: /over/
+description: "Over het onderzoek en de manier waarop bronnen worden gebruikt."
 ---
+Dit is de publicatieomgeving van **J.D. Berghuijs** voor onafhankelijk onderzoek en essays.
 
-# Over
+Op de website verschijnen beleidsreconstructies, onderzoeksupdates en artikelen. De interactieve [beleidstijdlijn](/tijdlijn/) is een afzonderlijk onderdeel van het onderzoek naar neutraliteit bij de Nederlandse politie.
 
-Deze site is een lichte publicatieplek voor langere teksten. De inhoud wordt als Markdown beheerd en via GitHub Pages naar het web gebracht.
+## Onderzoeksstandaard
 
-Het doel is eenvoudig: schrijven zonder zwaar systeem eromheen, met genoeg structuur voor artikelen, navigatie en toekomstige uitbreiding.
+De publicaties maken onderscheid tussen **vastgestelde feiten**, **interpretaties**, **hypothesen** en **onbekende informatie**. Waar mogelijk verwijzen beweringen direct naar openbare primaire bronnen.
+
+Niet alle onderzoeksdocumenten zijn publiek. Vertrouwelijke gegevens en interne onderzoeksaantekeningen worden niet in deze website opgenomen.
+
+## Correcties
+
+Onderzoek is niet statisch. Nieuwe documenten, tegenbewijs en controleerbare correcties kunnen aanleiding geven om eerdere bevindingen te herzien.

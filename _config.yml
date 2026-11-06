@@ -1,10 +1,25 @@
-title: Don Berghuijs
-description: Markdown website published from SocialMediaManager.
+title: "J.D. Berghuijs"
+tagline: "Onderzoek, beleid en essays"
+description: "Onafhankelijke onderzoeken, beleidsreconstructies en essays van J.D. Berghuijs."
 url: "https://donberghuijs.nl"
 baseurl: ""
+lang: "nl"
+author: "J.D. Berghuijs"
+timezone: "Europe/Amsterdam"
 markdown: kramdown
+permalink: /artikelen/:year/:month/:day/:title/
 defaults:
   - scope:
-      path: ""
+      path: "articles"
+      type: "pages"
     values:
-      layout: default
+      layout: post
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

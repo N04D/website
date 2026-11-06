@@ -3,31 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <meta name="color-scheme" content="light">
+  <title>{% if page.title %}{{ page.title | escape }} — {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Don Berghuijs home">
-        <strong>{{ site.title }}</strong>
-        <span>{{ site.description }}</span>
-      </a>
-      {% include nav.html %}
-    </header>
-    <main>
-      {% if page.layout_mode == 'plain' %}
-        {{ content }}
-      {% else %}
-        <article class="content">
-          {{ content }}
-        </article>
-      {% endif %}
-    </main>
-    <footer class="site-footer">
-      <span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</span>
-    </footer>
-  </div>
+  <a class="skip-link" href="#main">Naar inhoud</a>
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <a class="site-logo" href="{{ '/' | relative_url }}">J.D. <span>Berghuijs</span><small>Onderzoek & essays</small></a>
+      <nav class="site-menu" aria-label="Hoofdnavigatie">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+        <a href="{{ '/tijdlijn/' | relative_url }}">Beleidstijdlijn</a>
+        <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' %} aria-current="page"{% endif %}>Artikelen</a>
+        <a href="{{ '/over/' | relative_url }}">Over</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="site-footer">
+    <div class="wrapper footer-inner">
+      <span>© {{ site.time | date: '%Y' }} {{ site.author }} · Onafhankelijk onderzoek</span>
+      <span>Bronnen waar mogelijk rechtstreeks gekoppeld · Publicaties onder menselijke eindredactie</span>
+    </div>
+  </footer>
 </body>
 </html>

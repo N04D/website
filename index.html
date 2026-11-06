@@ -1,0 +1,49 @@
+---
+layout: default
+title: Home
+description: "Onderzoek, bronnen en essays van J.D. Berghuijs. Bekijk de interactieve beleidstijdlijn en lees nieuwe publicaties."
+---
+<section class="home-hero">
+  <div class="wrapper home-hero-inner">
+    <p class="eyebrow">J.D. Berghuijs · Onderzoekswerkplaats</p>
+    <h1>Vragen stellen.<br><em>Bronnen volgen.</em><br>Beleid begrijpen.</h1>
+    <p class="hero-intro">Onafhankelijk onderzoek, bestuurlijke reconstructies en essays. Niet alleen wat er is besloten, maar ook welke argumenten, onderzoeken en documenten daaraan ten grondslag liggen.</p>
+    <div class="hero-buttons">
+      <a class="button primary" href="{{ '/tijdlijn/' | relative_url }}">Verken de beleidstijdlijn <span>↗</span></a>
+      <a class="button ghost" href="{{ '/blog/' | relative_url }}">Lees de artikelen <span>→</span></a>
+    </div>
+    <div class="hero-stats"><span>1994–2026 <small>Historische reconstructie</small></span><span>18 momenten <small>Beleid, onderzoek en Woo</small></span><span>Bron voor bron <small>Controleerbaar onderzoek</small></span></div>
+  </div>
+</section>
+<section class="wrapper feature-section">
+  <div class="section-intro"><div><span class="eyebrow dark">Uitgelicht onderzoek</span><h2>Hoe werd neutraliteit<br>een voorschrift?</h2></div><p>Een interactieve reconstructie van het neutraliteitsbeleid bij de Nederlandse politie, met documenten, beslismomenten en openstaande onderzoeksvragen.</p></div>
+  <a class="feature-panel" href="{{ '/tijdlijn/' | relative_url }}">
+    <span class="feature-rail">BELEIDSRECONSTRUCTIE · NEDERLANDSE POLITIE</span>
+    <div><span class="feature-label">Interactieve tijdlijn</span><h3>Van uniformregels naar het debat over de hoofddoek.</h3><p>Volg de ontwikkeling van regelgeving, adviezen, experimentvoorstellen en bestuurlijke afwegingen.</p><span class="feature-action">Bekijk de tijdlijn ↗</span></div>
+    <div class="feature-graphic" aria-hidden="true"><span>1994</span><span class="graphic-line"></span><span>2026</span></div>
+  </a>
+</section>
+<section class="journal-section"><div class="wrapper">
+  <div class="section-intro journal-heading"><div><span class="eyebrow dark">Publicaties</span><h2>Recente artikelen</h2></div><a href="{{ '/blog/' | relative_url }}">Alle artikelen →</a></div>
+  {% assign auto_articles = site.pages | where_exp: "entry", "entry.path contains 'articles/'" | where_exp: "entry", "entry.status == 'published'" %}
+  {% assign n_articles = auto_articles.size | plus: site.posts.size %}
+  {% if n_articles > 0 %}
+    <div class="post-grid">
+      {% for post in site.posts limit: 3 %}
+        <article class="post-card"><span class="post-category">{{ post.category | default: 'Essay' | escape }}</span>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 24 | escape }}</p>
+          <footer><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d-%m-%Y' }}</time><a href="{{ post.url | relative_url }}">Lees verder →</a></footer></article>
+      {% endfor %}
+      {% for post in auto_articles limit: 3 %}
+        <article class="post-card"><span class="post-category">{{ post.category | default: 'Publicatie' | escape }}</span>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 24 | escape }}</p>
+          <footer><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d-%m-%Y' }}</time><a href="{{ post.url | relative_url }}">Lees verder →</a></footer></article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-posts"><h3>De artikelen verschijnen hier.</h3><p>Nieuwe publicaties worden in Markdown geschreven en na controle automatisch in deze vormgeving opgenomen. De interactieve tijdlijn is alvast beschikbaar.</p></div>
+  {% endif %}
+</div></section>
+<section class="wrapper principle"><div><span class="eyebrow dark">Werkwijze</span><h2>Een besluit is het eindpunt.<br><em>De afweging is het onderzoek.</em></h2></div><p>Feiten, interpretaties, hypothesen en onbekende informatie worden van elkaar onderscheiden. Een ontbrekend document bewijst niet dat het niet bestaat.</p></section>

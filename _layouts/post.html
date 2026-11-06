@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section class="article-masthead">
+  <div class="wrapper article-masthead-inner">
+    <a class="back" href="{{ '/blog/' | relative_url }}">← Alle artikelen</a>
+    <span class="eyebrow">{{ page.category | default: 'Publicatie' | escape }}</span>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="article-lead">{{ page.description | escape }}</p>{% endif %}
+    <p class="article-meta">{{ page.date | date: '%-d %B %Y' }} · {{ page.author | default: site.author | escape }}{% if page.status %} · {{ page.status | escape }}{% endif %}</p>
+  </div>
+</section>
+<div class="wrapper article-grid">
+  <article class="article-body">{{ content }}</article>
+  <aside class="article-aside" aria-label="Context">
+    <strong>Onderzoek & bronnen</strong>
+    <p>Feiten, duiding en open vragen worden waar nodig van elkaar onderscheiden.</p>
+    <a href="{{ '/tijdlijn/' | relative_url }}">Bekijk de beleidstijdlijn →</a>
+  </aside>
+</div>
+<section class="wrapper end-link"><a href="{{ '/blog/' | relative_url }}">← Terug naar alle artikelen</a></section>
