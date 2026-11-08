@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light">
   {% assign seo_title = page.og_title | default: page.title | default: site.title %}
   {% assign seo_description = page.og_description | default: page.description | default: site.description %}
-  {% assign seo_image = page.image | default: site.image | default: '/assets/images/social-preview.png' %}
+  {% assign seo_image = page.image | default: site.image | default: '/assets/images/social-preview-v3.png' %}
   {% assign seo_site_name = site.site_name | default: 'J.D. Berghuijs — Onderzoekswerkplaats' %}
   <title>{% if page.url == '/' %}{{ seo_site_name | escape }} | {{ seo_title | escape }}{% elsif page.title %}{{ page.title | escape }} — {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ seo_description | escape }}">
