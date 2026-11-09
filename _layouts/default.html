@@ -29,7 +29,6 @@
   <meta name="twitter:description" content="{{ seo_description | escape }}">
   <meta name="twitter:image" content="{{ seo_image | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <script src="{{ '/assets/js/consent-gtm.js' | relative_url }}"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Naar inhoud</a>
@@ -48,8 +47,10 @@
   <footer class="site-footer">
     <div class="wrapper footer-inner">
       <span>© {{ site.time | date: '%Y' }} {{ site.author }} · Onafhankelijk onderzoek</span>
-      <span class="footer-links">Bronnen waar mogelijk rechtstreeks gekoppeld · <a href="{{ '/privacy/' | relative_url }}">Privacy &amp; cookies</a> · <button type="button" class="footer-link-btn" data-open-consent>Cookievoorkeuren</button></span>
+      <span class="footer-links">Bronnen waar mogelijk rechtstreeks gekoppeld · Publicaties onder menselijke eindredactie · <a href="{{ '/privacy/' | relative_url }}">Privacy</a></span>
     </div>
   </footer>
+  <script data-goatcounter="https://berghuijs.goatcounter.com/count"
+          async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -1,49 +1,31 @@
 ---
 layout: page
-title: Privacy- en cookieverklaring
+title: Privacyverklaring
 permalink: /privacy/
-description: "Informatie over privacy, gegevensverwerking en het gebruik van analytische cookies op donberghuijs.nl."
+description: "Informatie over privacy en het gebruik van cookieloze, geaggregeerde bezoekersstatistieken via GoatCounter op donberghuijs.nl."
 ---
-Op **donberghuijs.nl** staat onafhankelijk onderzoek naar beleid en besluitvorming centraal. Daarbij hoort een zorgvuldige en transparante omgang met de privacy van bezoekers.
+Op **donberghuijs.nl** staat onafhankelijk onderzoek naar beleid en besluitvorming centraal. Daarbij hoort een zorgvuldige en terughoudende omgang met gegevens van bezoekers.
 
-## 1. Geen tracking zonder toestemming
+## 1. Geaggregeerde bezoekersstatistieken via GoatCounter
 
-Bij een eerste bezoek aan deze website worden **geen** analytische cookies geplaatst en worden Google Tag Manager (`GTM-PSGTVM6H`) en Google Analytics 4 (`G-4B1WJZ20TX`) **niet** geladen. Zolang u geen keuze maakt of kiest voor **Weigeren**, worden er geen verzoeken of bezoekgegevens vanuit uw browser naar Google verzonden.
+Deze website maakt gebruik van **GoatCounter** (`berghuijs.goatcounter.com`), een open-source en privacyvriendelijk statistiekenplatform, uitsluitend om op hoofdlijnen te begrijpen welke pagina's en onderzoeksreconstructies worden geraadpleegd.
 
-## 2. Analytische meting na toestemming
+## 2. Geen analytische trackingcookies of advertentieprofilering
 
-Pas wanneer u in de cookiebanner kiest voor **Accepteren**, wordt de Google Tag Manager-container (`GTM-PSGTVM6H`) geactiveerd. Via deze container wordt uitsluitend Google Analytics 4 (`G-4B1WJZ20TX`) gebruikt om algemene bezoekersstatistieken bij te houden, zoals:
+De gekozen inrichting van GoatCounter werkt volledig zonder trackingcookies:
 
-- welke pagina's en artikelen worden geraadpleegd;
-- hoe de beleidstijdlijn en navigatie op hoofdlijnen worden gebruikt;
-- globale technische kenmerken (zoals schermformaat en browsertype).
+- **Geen cookies of apparaat-opslag:** er worden geen analytische trackingcookies, `localStorage`-identifiers of vergelijkbare volgbestanden op uw apparaat geplaatst.
+- **Geen advertentieprofilering:** er vindt geen profilering, remarketing of gegevensdeling met advertentienetwerken of commerciële derden plaats.
+- **Geen cross-site tracking:** bezoekers worden niet over verschillende websites gevolgd en er worden geen individuele bezoekersprofielen opgebouwd.
 
-Deze inzichten worden uitsluitend gebruikt om de leesbaarheid, structuur en toegankelijkheid van de publicaties te verbeteren.
+Omdat er uitsluitend niet-herleidbare, geaggregeerde statistieken zonder trackingcookies worden verzameld, voldoet deze werkwijze aan de Nederlandse regels voor privacyvriendelijke statistieken (artikel 11.7a Telecommunicatiewet) en is er geen cookiebanner nodig.
 
-## 3. Privacyvriendelijke configuratie
+## 3. Welke gegevens worden op hoofdlijnen geteld?
 
-De analytische inrichting op deze website maakt gebruik van *Consent Mode* met strikte beperkingen:
+Bij een paginaweergave registreert GoatCounter uitsluitend algemene, geaggregeerde informatie:
 
-- **Geen advertenties of remarketing:** `ad_storage`, `ad_user_data` en `ad_personalization` staan permanent op `denied`.
-- **Geen Google Signals:** koppeling met gepersonaliseerde Google-profielen is uitgeschakeld.
-- **Geen dubbele tags:** er wordt uitsluitend gemeten via één centrale GTM-container en niet via losse aanvullende scripts.
-
-## 4. Gebruikte opslag en cookies
-
-| Naam | Type | Bewaartermijn | Doel |
-| :--- | :--- | :--- | :--- |
-| `donberghuijs_cookie_consent` | `localStorage` (functioneel) | Tot wissen browseropslag | Onthoudt of u analytische cookies hebt geaccepteerd (`granted`) of geweigerd (`denied`). |
-| `_ga` | Cookie (alleen na toestemming) | Max. 2 jaar | Onderscheidt sessies en terugkerende bezoeken voor geaggregeerde statistieken in Google Analytics 4. |
-| `_ga_4B1WJZ20TX` | Cookie (alleen na toestemming) | Max. 2 jaar | Bewaart de sessiestatus voor Google Analytics 4. |
-
-## 5. Uw keuze beheren of intrekken
-
-U kunt uw voorkeur op elk moment aanpassen via de link **Cookievoorkeuren** onderaan iedere pagina of direct via onderstaande knoppen. Wanneer u eerder gegeven toestemming intrekt door op **Weigeren** te klikken, worden aanwezige `_ga`-cookies direct verwijderd en stopt het laden van Google Tag Manager en Google Analytics onmiddellijk.
-
-<div class="consent-manage-box">
-  <p><strong data-consent-status>Huidige voorkeur wordt geladen…</strong></p>
-  <div class="cookie-banner-actions">
-    <button type="button" class="cookie-btn" data-set-consent="denied">Weigeren</button>
-    <button type="button" class="cookie-btn" data-set-consent="granted">Accepteren</button>
-  </div>
-</div>
+| Gegeven | Doel |
+| :--- | :--- |
+| **Bezochte pagina-URL en paginatitel** | Inzicht in welke artikelen en onderdelen van de beleidstijdlijn worden gelezen. |
+| **Verwijzende bron (`Referer`) en UTM-parameters** | Inzicht via welk kanaal of welke publicatielink (zoals `utm_source` en `utm_campaign`) een pagina is bereikt. |
+| **Globale technische kenmerken** | Algemene weergave van browsertype, besturingssysteem, schermbreedte en land/regio zonder opslag van uw IP-adres. |
