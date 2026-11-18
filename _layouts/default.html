@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon" sizes="any">
   {% assign seo_title = page.og_title | default: page.title | default: site.title %}
   {% assign seo_description = page.og_description | default: page.description | default: site.description %}
   {% assign seo_image = page.image | default: site.image | default: '/assets/images/social-preview-v3.png' %}
