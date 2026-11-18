@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# J.D. Berghuijs — Onderzoekswerkplaats
+
+> Nederlandstalig onderzoeksplatform. De publicaties onderscheiden gedocumenteerde feiten, duiding en open onderzoeksvragen.
+
+- [Over het platform]({{ '/over/' | absolute_url }}): werkwijze, bronnen en correcties.
+- [Beleidstijdlijn politie]({{ '/tijdlijn/' | absolute_url }}): historische reconstructie met verwijzingen naar openbare bronnen.
+- [Artikelen]({{ '/blog/' | absolute_url }}): alle gepubliceerde artikelen.
+- [Artikelenindex (JSON)]({{ '/api/articles.json' | absolute_url }}): machineleesbare lijst van de publieke artikelen.
+
+Citeer waar mogelijk de bronpagina en de daarin opgenomen primaire documenten. Niet-gepubliceerde concepten en interne onderzoeksdossiers maken geen deel uit van deze site.
