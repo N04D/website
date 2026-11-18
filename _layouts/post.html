@@ -7,7 +7,8 @@ layout: default
     <span class="eyebrow">{{ page.category | default: 'Publicatie' | escape }}</span>
     <h1>{{ page.title | escape }}</h1>
     {% if page.description %}<p class="article-lead">{{ page.description | escape }}</p>{% endif %}
-    <p class="article-meta">{{ page.date | date: '%-d %B %Y' }} · {{ page.author | default: site.author | escape }}{% if page.status %} · {{ page.status | escape }}{% endif %}</p>
+    {% if page.project_id %}<p class="article-project">Onderdeel van project: {{ page.project_title | default: page.project_id | escape }}</p>{% endif %}
+    <p class="article-meta">{{ page.date | date: '%-d %B %Y' }} · {{ page.author | default: site.author | escape }}{% if page.last_modified_at %} · Bijgewerkt {{ page.last_modified_at | date: '%-d %B %Y' }}{% endif %}{% if page.status %} · {{ page.status | escape }}{% endif %}</p>
   </div>
 </section>
 <div class="wrapper article-grid">

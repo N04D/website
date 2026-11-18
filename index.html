@@ -27,9 +27,7 @@ image: "/assets/images/social-preview-v3.png"
 </section>
 <section class="journal-section"><div class="wrapper">
   <div class="section-intro journal-heading"><div><span class="eyebrow dark">Publicaties</span><h2>Recente artikelen</h2></div><a href="{{ '/blog/' | relative_url }}">Alle artikelen →</a></div>
-  {% assign auto_articles = site.pages | where_exp: "entry", "entry.path contains 'articles/'" | where_exp: "entry", "entry.status == 'published'" %}
-  {% assign n_articles = auto_articles.size | plus: site.posts.size %}
-  {% if n_articles > 0 %}
+  {% if site.posts.size > 0 %}
     <div class="post-grid">
       {% for post in site.posts limit: 3 %}
         <article class="post-card"><span class="post-category">{{ post.category | default: 'Essay' | escape }}</span>
@@ -37,12 +35,7 @@ image: "/assets/images/social-preview-v3.png"
           <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 24 | escape }}</p>
           <footer><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d-%m-%Y' }}</time><a href="{{ post.url | relative_url }}">Lees verder →</a></footer></article>
       {% endfor %}
-      {% for post in auto_articles limit: 3 %}
-        <article class="post-card"><span class="post-category">{{ post.category | default: 'Publicatie' | escape }}</span>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 24 | escape }}</p>
-          <footer><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d-%m-%Y' }}</time><a href="{{ post.url | relative_url }}">Lees verder →</a></footer></article>
-      {% endfor %}
+
     </div>
   {% else %}
     <div class="empty-posts"><h3>De artikelen verschijnen hier.</h3><p>Nieuwe publicaties worden in Markdown geschreven en na controle automatisch in deze vormgeving opgenomen. De interactieve tijdlijn is alvast beschikbaar.</p></div>

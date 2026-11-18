@@ -10,12 +10,12 @@ author: "J.D. Berghuijs"
 timezone: "Europe/Amsterdam"
 markdown: kramdown
 permalink: /artikelen/:year/:month/:day/:title/
+# One canonical article pipeline: Jekyll _posts/, rendered at /blog/.
+# `project_id` is optional front matter; future project pages can index it.
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
 defaults:
-  - scope:
-      path: "articles"
-      type: "pages"
-    values:
-      layout: post
   - scope:
       path: ""
       type: "posts"
